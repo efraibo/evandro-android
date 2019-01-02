@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         //vNome.getText().clear();
 
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edtNome);
+        EditText editText = findViewById(R.id.edtNome);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
@@ -56,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void callSearch(View view) {
         Intent intent = new Intent(this, SearchViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void callWebView(View view) {
+        Intent intent = new Intent(this, WebViewActivity.class);
         startActivity(intent);
     }
 }

@@ -7,7 +7,6 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,7 +17,6 @@ public class SearchViewActivity extends AppCompatActivity {
     private List<String> list = Arrays.asList("Apple", "Banana", "Pineapple", "Orange", "Lychee",
             "Gavava", "Peech", "Melon", "Watermelon", "Papaya");
     private ArrayAdapter<String> adapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +30,18 @@ public class SearchViewActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-
-                if (list.contains(query)) {
-                    adapter.getFilter().filter(query);
-                } else {
-                    Toast.makeText(SearchViewActivity.this, "No Match found", Toast.LENGTH_LONG).show();
-                }
+//
+//                if (list.contains(query)) {
+//                    adapter.getFilter().filter(query);
+//                } else {
+//                    Toast.makeText(SearchViewActivity.this, "No Match found", Toast.LENGTH_LONG).show();
+//                }
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                //    adapter.getFilter().filter(newText);
+                adapter.getFilter().filter(newText);
                 return false;
             }
         });

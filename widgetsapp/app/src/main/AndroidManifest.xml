@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sourceinformation.com.br.widgets_app">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,7 +34,8 @@
         <activity android:name=".ImageViewActivity" />
         <activity android:name=".SeekBarActivity" />
         <activity android:name=".RatingBarActivity" />
-        <activity android:name=".SearchViewActivity"></activity>
+        <activity android:name=".SearchViewActivity" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>
