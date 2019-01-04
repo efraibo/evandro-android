@@ -3,6 +3,10 @@
     package="sourceinformation.com.br.widgets_app">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -36,6 +40,8 @@
         <activity android:name=".RatingBarActivity" />
         <activity android:name=".SearchViewActivity" />
         <activity android:name=".WebViewActivity" />
+        <activity android:name=".CallActivity" />
+        <activity android:name=".CameraActivity"></activity>
     </application>
 
 </manifest>

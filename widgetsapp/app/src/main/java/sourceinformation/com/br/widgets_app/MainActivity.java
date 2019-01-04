@@ -71,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void call(View view) {
+        Intent intent = new Intent(this, CallActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuItem item = menu.findItem(R.id.mShare);
@@ -98,5 +103,10 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Click no menu para compartilhar", Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
 
+    }
+
+    public void callCamera(View view) {
+        Intent intent = new Intent(this, CameraActivity.class);
+        startActivity(intent);
     }
 }
