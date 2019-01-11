@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bwq="http://schemas.android.com/tools">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brq="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
     <item
-        android:id="@+id/mShare"
-        android:title="Share"
-        bwq:actionProviderClass="android.support.v7.widget.ShareActionProvider"
-        bwq:showAsAction="always"
-        />
-    ...
+        android:id="@+id/action_favorite"
+        android:icon=""
+        android:title="Action Bar"
+        brq:showAsAction="ifRoom" />
+
+    <!-- Settings, should always be in the overflow -->
+    <item
+        android:id="@+id/action_settings"
+        android:layout_width="wrap_content"
+        android:title="ActionBar"
+        brq:showAsAction="never" />
+
 </menu>

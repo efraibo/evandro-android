@@ -109,4 +109,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CameraActivity.class);
         startActivity(intent);
     }
+
+    public void callActionBar(View view) {
+        Intent intent = new Intent(this, ActionBarActivity.class);
+        startActivity(intent);
+    }
 }

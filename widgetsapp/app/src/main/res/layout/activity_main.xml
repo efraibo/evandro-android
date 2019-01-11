@@ -1,139 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnTeste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="114dp"
-        android:onClick="sendMenssage"
-        android:text="@string/btn_name"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="44dp" />
+            android:id="@+id/btnTeste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="114dp"
+            android:onClick="sendMenssage"
+            android:text="@string/btn_name"
+            tools:layout_editor_absoluteX="154dp"
+            tools:layout_editor_absoluteY="44dp"/>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="61dp">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/edtNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite Seu nome" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="61dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Digite Seu nome"/>
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="336dp"
-        android:onClick="callProgress"
-        android:text="@string/btn_progress" />
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="336dp"
+            android:onClick="callProgress"
+            android:text="@string/btn_progress"/>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="171dp"
+            android:id="@+id/button"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="callView"
+            android:text="@string/btn_view"/>
+
+    <Button
+            android:id="@+id/btnImageView"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="259dp"
+            android:onClick="callImageView"
+            android:text="Image View"/>
+
+    <Button
+            android:id="@+id/btnSeekBar"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignBottom="@+id/btnImageView"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="callSeekBar"
+            android:text="SeekBar"/>
+
+    <Button
+            android:id="@+id/button4"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="182dp"
+            android:onClick="callRatingBar"
+            android:text="Rating Bar"/>
+
+    <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/button4"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="callSearch"
+            android:text="Search"/>
+
+    <Button
+            android:id="@+id/btnWebView"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="102dp"
+            android:text="WEB VIEW"
+            android:onClick="callWebView"
+            android:layout_alignLeft="@+id/button2"/>
+
+    <Button
+            android:id="@+id/btnCall"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnWebView"
+            android:layout_marginBottom="0dp"
+            android:text="Call"
+            android:onClick="call"
+            android:layout_alignLeft="@+id/btnSearch"/>
+
+    <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="41dp"
+            android:text="Câmera"
+            android:onClick="callCamera"
+            android:layout_alignLeft="@+id/button2"/>
+
+    <Button
+        android:id="@+id/btnActionBar"
+        android:layout_width="159dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="7dp"
-        android:layout_marginRight="7dp"
+        android:layout_alignBottom="@+id/btnCamera"
         android:layout_marginBottom="0dp"
-        android:onClick="callView"
-        android:text="@string/btn_view" />
-
-    <Button
-        android:id="@+id/btnImageView"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginBottom="259dp"
-        android:onClick="callImageView"
-        android:text="Image View" />
-
-    <Button
-        android:id="@+id/btnSeekBar"
-        android:layout_width="166dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignBottom="@+id/btnImageView"
-        android:layout_marginLeft="0dp"
-        android:layout_marginBottom="0dp"
-        android:onClick="callSeekBar"
-        android:text="SeekBar" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginBottom="182dp"
-        android:onClick="callRatingBar"
-        android:text="Rating Bar" />
-
-    <Button
-        android:id="@+id/btnSearch"
-        android:layout_width="157dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:layout_marginBottom="0dp"
-        android:onClick="callSearch"
-        android:text="Search" />
-
-    <Button
-        android:id="@+id/btnWebView"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="102dp"
-        android:text="WEB VIEW"
-        android:onClick="callWebView"
-        android:layout_alignLeft="@+id/button2" />
-
-    <Button
-        android:id="@+id/btnCall"
-        android:layout_width="153dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnWebView"
-        android:layout_marginBottom="0dp"
-        android:text="Call"
-        android:onClick="call"
-        android:layout_alignLeft="@+id/btnSearch" />
-
-    <Button
-        android:id="@+id/btnCamera"
-        android:layout_width="166dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="41dp"
-        android:text="Câmera"
-        android:onClick="callCamera"
-        android:layout_alignLeft="@+id/button2" />
+        android:text="Action Bar"
+        android:onClick="callActionBar"
+        android:layout_alignLeft="@+id/button" />
 
 </RelativeLayout>

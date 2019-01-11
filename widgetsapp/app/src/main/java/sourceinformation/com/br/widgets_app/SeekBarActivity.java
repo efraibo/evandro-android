@@ -22,7 +22,7 @@ public class SeekBarActivity extends AppCompatActivity {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser) {
-                progress =  progressValue;
+                progress = progressValue;
                 Toast.makeText(getApplicationContext(), "Changing seekbar's progress", Toast.LENGTH_SHORT).show();
             }
 

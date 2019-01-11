@@ -52,7 +52,7 @@ public class ProgressBarActivity extends AppCompatActivity {
 
     private void updateProgress(final int timePassed) {
         if (null != mProgressBar) {
-            final int progress = mProgressBar.getMax() * timePassed /TIMER_RUNTIME;
+            final int progress = mProgressBar.getMax() * timePassed / TIMER_RUNTIME;
             mProgressBar.setProgress(progress);
         }
     }

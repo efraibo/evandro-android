@@ -19,10 +19,12 @@ import sourceinformation.com.br.widgets_app.model.Pessoa;
 
 public class CallActivity extends AppCompatActivity {
 
-    private List<Pessoa> Pessoas ;
+    private List<Pessoa> Pessoas;
     private int _posicao;
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     */
 
     @Override
 
@@ -37,7 +39,7 @@ public class CallActivity extends AppCompatActivity {
         Pessoas = pessoa.getPessoa();
 
         // adapter que sera o source para a listview
-        ArrayAdapter<Pessoa> adapter = new ArrayAdapter<Pessoa>(this,android.R.layout.simple_list_item_1, Pessoas);
+        ArrayAdapter<Pessoa> adapter = new ArrayAdapter<Pessoa>(this, android.R.layout.simple_list_item_1, Pessoas);
 
         //seta o adapter para o listview
         listaPessoas.setAdapter(adapter);
@@ -46,7 +48,7 @@ public class CallActivity extends AppCompatActivity {
         listaPessoas.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
             @Override
-            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,int posicao, long id) {
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int posicao, long id) {
 
                 _posicao = posicao;
                 // TODO Auto-generated method stub
@@ -61,14 +63,13 @@ public class CallActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         // TODO Auto-generated method stub
         super.onCreateContextMenu(menu, v, menuInfo);
 
         //cria o menu para fazer a ligação
-        menu.add(0,0,0, "Ligar");
+        menu.add(0, 0, 0, "Ligar");
 
     }
 
@@ -76,7 +77,7 @@ public class CallActivity extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
 
         // TODO Auto-generated method stub
-        if(item.getItemId()==0) {
+        if (item.getItemId() == 0) {
             try {
                 //Tipos de chamadas
 
@@ -90,7 +91,7 @@ public class CallActivity extends AppCompatActivity {
 
                 startActivity(chamada);
 
-            } catch(ActivityNotFoundException act) {
+            } catch (ActivityNotFoundException act) {
                 Log.e("Exemplo de chamada", "falha", act);
             }
         }

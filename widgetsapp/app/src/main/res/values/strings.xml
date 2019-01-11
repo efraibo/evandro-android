@@ -5,4 +5,5 @@
     <string name="btn_voltar_progress">Voltar</string>
     <string name="btn_view">Exibir view</string>
     <string name="checkbox_view">Desabilitar view</string>
+    <string name="title_activity_action_bar">ActionBarActivity</string>
 </resources>
